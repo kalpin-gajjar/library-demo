@@ -1,0 +1,9 @@
+<div class="d-flex bg-primary p-2 align-items-center justify-content-between">
+  <%= link_to(root_path, class:"text-decoration-none") do%>
+    <h3 class="text-white">My Library</h3>
+  <% end %>
+  <div>
+    <%= link_to 'Books', books_path, class:"bg-white text-decoration-none fw-bold p-2 mx-2 rounded"%>
+    <%= link_to 'Authors', authors_path, class:"bg-white text-decoration-none fw-bold p-2 mx-2 rounded"%>
+  </div>
+</div>

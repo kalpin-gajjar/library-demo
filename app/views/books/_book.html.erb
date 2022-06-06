@@ -1,0 +1,17 @@
+<div id="<%= dom_id book %>">
+  <h3><%= book.name %></h3>
+  <hr>
+  <p>
+    <strong>Author Name:</strong>
+    <%= Author.find(book.author_id).name %>
+  </p>
+  <p class="d-flex ">
+    <strong>Cover Photos:</strong>
+    <div class="d-flex w-100">
+      <% book.cover_photos.each do |photo| %>
+        <%= image_tag photo, size: "200x200", class:"mx-2" %>
+      <% end %>
+    </div>
+  </p>
+  <hr>
+</div>

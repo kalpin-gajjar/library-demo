@@ -1,0 +1,21 @@
+<div class="mx-4 my-2">
+  <p style="color: green"><%= notice %></p>
+  <h2>Books</h2>
+  <hr>
+  <div id="books">
+    <% @books.each do |book| %>
+      <div class="mb-5">
+        <h4 class="text-primary"><%= book.name %></h4>
+        <div class="d-flex">
+          <strong>Author :</strong>&nbsp;
+          <p><%= Author.find(book.author_id).name %></p>
+        </div>
+        <p>
+          <%= link_to "Show this book", book, class:"bg-secondary text-white text-decoration-none fw-bold p-2 rounded" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <%= link_to "New book", new_book_path, class:"bg-primary text-white text-decoration-none fw-bold p-2 rounded" %>
+</div>

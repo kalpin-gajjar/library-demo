@@ -1,0 +1,9 @@
+<div class="mx-4 my-2">
+  <p style="color: green"><%= notice %></p>
+  <%= render @book %>
+  <div>
+    <%= link_to "Edit this book", edit_book_path(@book), class:"bg-primary text-white text-decoration-none fw-bold p-2 rounded" %> |
+    <%= link_to "Back to books", books_path, class:"bg-primary text-white text-decoration-none fw-bold p-2 rounded" %>
+    <%= button_to "Destroy this book", @book, method: :delete, class:"bg-danger text-white text-decoration-none fw-bold p-1 rounded mt-3 border-0" %>
+  </div>
+</div>

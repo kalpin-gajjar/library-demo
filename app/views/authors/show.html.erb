@@ -1,0 +1,9 @@
+<div class="mx-4 my-2">
+  <p style="color: green"><%= notice %></p>
+  <%= render @author %>
+  <div>
+    <%= link_to "Edit this author", edit_author_path(@author), class:"bg-primary text-white text-decoration-none fw-bold p-2 rounded" %> |
+    <%= link_to "Back to authors", authors_path, class:"bg-primary text-white text-decoration-none fw-bold p-2 rounded" %>
+    <%= button_to "Destroy this author", @author, method: :delete, class:"bg-danger text-white text-decoration-none fw-bold p-1 rounded mt-3 border-0"  %>
+  </div>
+</div>

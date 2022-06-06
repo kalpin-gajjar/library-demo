@@ -1,0 +1,15 @@
+<div id="<%= dom_id author %>">
+  <h3><%= author.name %></h3>
+  <hr>
+  <p>
+    <strong>Address:</strong>
+    <%= author.address %>
+  </p>
+  <p class="d-flex flex-column">
+    <strong>Profile Picture:</strong>
+    <div>
+      <%= image_tag author.profile_picture, size: "200x200" %>
+    </div>
+  </p>
+  <hr>
+</div>

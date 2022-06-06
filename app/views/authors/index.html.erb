@@ -1,0 +1,20 @@
+<div class="mx-4 my-2">
+  <p style="color: green"><%= notice %></p>
+  <h2>Authors</h2>
+  <hr>
+  <div id="authors">
+    <% @authors.each_with_index do |author, index| %>
+      <div class="mb-5">
+        <div class="d-flex">
+          <strong><%= index + 1 %> | Name :</strong>&nbsp;
+          <p><%= author.name %></p>
+        </div>
+        <p>
+          <%= link_to "Show this author", author, class:"bg-secondary text-white text-decoration-none fw-bold p-2 rounded" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <%= link_to "New author", new_author_path, class:"bg-primary text-white text-decoration-none fw-bold p-2 rounded" %>
+</div>
